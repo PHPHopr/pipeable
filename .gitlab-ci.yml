@@ -1,0 +1,8 @@
+image: php:8.4-cli
+
+test:
+  script:
+    - composer install
+    - vendor/bin/pest
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"

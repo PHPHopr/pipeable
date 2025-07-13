@@ -1,0 +1,32 @@
+{
+  "name": "hopr/pipeable",
+  "description": "A collection of pipeable proxy functions for PHP's standard library",
+  "type": "library",
+  "autoload": {
+    "exclude-from-classmap": [
+      "/tests/",
+      "/examples/"
+    ],
+    "psr-4": {
+      "Hopr\\Pipeable\\": "src/"
+    },
+    "files": [
+      "src/Array/functions.php",
+      "src/String/functions.php",
+      "src/functions.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "pestphp/pest": "^3.8"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
